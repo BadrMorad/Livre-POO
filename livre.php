@@ -1,40 +1,56 @@
 <?php
+
 class Livre {
-    private $titre;      
-    private $pages;      
-    private $annee;      
-    private $prix;       
-    private $auteur;     
-    public function __construct($titre, $pages, $annee, $prix, Auteur $auteur) {
-        $this->titre = $titre;
-        $this->pages = $pages
-        $this->annee = $annee;
-        $this->prix = $prix;
+    private string $_titre;
+    private int $_nbreDePages;
+    private $anneeDeParution;
+    private int $_prix;
+    private Auteur $auteur;
+
+    public function __construct($stitle, $nbPages, $annee, $prix, $auteur) {
+        $this->_titre = $stitle;
+        $this->_nbreDePages = $nbPages;
+        $this->anneeDeParution = $annee;
+        $this->_prix = $prix;
         $this->auteur = $auteur;
     }
-    public function getTitre() {
-        return $this->titre;
+
+    public function getTitle() {
+        return $this->_titre;
     }
-    public function getPages() {
-        return $this->pages;
+
+    public function setTitle($title) {
+        $this->_titre = $title;
     }
-    public function getAnnee() {
-        return $this->annee;
+
+    public function getNbreDePages() {
+        return $this->_nbreDePages;
     }
+
+    public function setNbreDePages($pages) {
+        $this->_nbreDePages = $pages;
+    }
+
+    public function setAnneeDeParution($annee) {
+        $this->anneeDeParution = $annee;
+    }
+
     public function getPrix() {
-        return $this->prix;
+        return $this->_prix;
     }
+
+    public function setPrix($prix) {
+        $this->_prix = $prix;
+    }
+
     public function getAuteur() {
         return $this->auteur;
     }
-    // Méthode toString pour afficher les détails du livre
+
     public function __toString() {
-        return 
-    }
-   // la méthode pour function 
-    public function () {
-        return $this->__toString();
+        return "Titre: {$this->_titre}, Pages: {$this->_nbreDePages}, Année: {$this->anneeDeParution}, Prix: {$this->_prix}, Auteur: {$this->auteur}";
     }
 }
+
 ?>
  
