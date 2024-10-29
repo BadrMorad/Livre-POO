@@ -3,12 +3,14 @@
 class Auteur {
     private string $prenom;  // Prénom de l'auteur
     private string $nom;     // Nom de l'auteur
+    private DateTime $dateNaissance; 
     private array $livres;   // Tableau pour stocker les livres de l'auteur
 
     // Constructeur 
-    public function __construct($prenom, $nom) {
+    public function __construct($prenom, $nom, $dateNaissance) {
         $this->prenom = $prenom; // Initialise le prénom
         $this->nom = $nom;       // Initialise le nom
+        $this->dateNaissance = new DateTime($dateNaissance); 
         $this->livres = array(); // Initialise le tableau des livres
     }
 
@@ -21,6 +23,12 @@ class Auteur {
     public function getNom() {
         return $this->nom; // Retourne le nom
     }
+    public function getDateNaissance() {
+        return $this->dateNaissance; // Retourne la date de naissance
+    }
+
+    
+
 
     // Méthode __toString() pour afficher le nom complet de l'auteur
     public function __toString() {  

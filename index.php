@@ -4,7 +4,7 @@ include 'Auteur.php';
 include 'Livre.php';
 
 // Créer un auteur avec son prénom et son nom
-$auteur = new Auteur("Stephen", "King");
+$auteur = new Auteur("Stephen", "King","dateNaissance");
 
 // Créer des livres en spécifiant leur titre, ISBN, année de publication, prix et auteur
 $livre1 = new Livre("CA", "1138", "1986", 20, $auteur);
