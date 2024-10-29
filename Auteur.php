@@ -27,12 +27,19 @@ class Auteur {
     public function __toString() {  
         return $this->prenom . " " . $this->nom;
     }
-    public function bibiliographie(){
-        
+    public function ajouterLivre(Livre $livre){
+        $this->livres[]=$livre;
     }
+    public function bibliographie(){
+        foreach ($this->livres as $livre){
+
+            return $livre;
+
+        }
+
+      
+    }
+   
 }
 
-// Exemple d'utilisation
-$auteur = new Auteur("Stephen", "King");
-echo $auteur; // Affiche : Stephen King
 ?>

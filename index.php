@@ -19,7 +19,7 @@ echo $livre4 . "<br>";
 $livres = array($livre1, $livre2, $livre3, $livre4);
 array_push($livres, "autre livre"); // Ajoute une chaîne de caractères comme "autre livre"
 // Afficher la bibliographie de l'auteur
-// Débogage
+echo $auteur->bibliographie();
 var_dump($auteur);
 var_dump($livre1);
 ?>

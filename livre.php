@@ -13,6 +13,7 @@ class Livre {
         $this->anneeDeParution = $annee;
         $this->_prix = $prix;
         $this->auteur = $auteur;
+        $auteur->ajouterLivre($this);
     }
 
     public function getTitle() {
