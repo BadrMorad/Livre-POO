@@ -27,6 +27,9 @@ class Auteur {
     public function __toString() {  
         return $this->prenom . " " . $this->nom;
     }
+    public function bibiliographie(){
+        
+    }
 }
 
 // Exemple d'utilisation
