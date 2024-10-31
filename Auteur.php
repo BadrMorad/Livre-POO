@@ -33,7 +33,7 @@ class Auteur {
     public function age() {
         $aujourdhui = new DateTime(); 
         $age = $aujourdhui->diff($this->dateNaissance); 
-        return $age->y; // Retourne l'âge en années
+        return $age->y; 
     }
 
     // Méthode __toString() pour afficher le nom complet de l'auteur

@@ -29,11 +29,11 @@ $auteur->ajouterLivre($livre3);
 $auteur->ajouterLivre($livre4);
 
 // Afficher la bibliographie de l'auteur
-foreach ($auteur->bibliographie() as $livre) {
-    echo $livre . "<br>"; // Affiche chaque livre de la bibliographie
-}
-
+$auteur->bibliographie();
 // Débogage : afficher les détails de l'objet auteur
-var_dump($auteur); // Montre les propriétés de l'objet auteur
-var_dump($livre1); // Montre les propriétés de l'objet livre1
+// var_dump($auteur); // Montre les propriétés de l'objet auteur
+// var_dump($livre1); // Montre les propriétés de l'objet livre1
+
+echo $auteur->age();
 ?>
+    
