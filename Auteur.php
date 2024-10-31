@@ -26,13 +26,13 @@ class Auteur {
 
     // Getter pour la date de naissance 
     public function getDateNaissance() {
-        return $this->dateNaissance; // Retourne la date de naissance
+        return $this->dateNaissance; 
     }
 
     // Méthode pour calculer l'âge de l'auteur
     public function age() {
-        $aujourdhui = new DateTime(); // Date actuelle
-        $age = $aujourdhui->diff($this->dateNaissance); // Calcule la différence
+        $aujourdhui = new DateTime(); 
+        $age = $aujourdhui->diff($this->dateNaissance); 
         return $age->y; // Retourne l'âge en années
     }
 
@@ -43,7 +43,7 @@ class Auteur {
 
     // Méthode pour ajouter un livre à la bibliographie
     public function ajouterLivre(Livre $livre) {
-        $this->livres[] = $livre; // Ajoute un livre au tableau
+        $this->livres[] = $livre; 
     }
 
     // Méthode pour obtenir la bibliographie de l'auteur
