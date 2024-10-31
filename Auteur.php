@@ -23,12 +23,18 @@ class Auteur {
     public function getNom() {
         return $this->nom; // Retourne le nom
     }
+
+    // Getter pour la date de naissance 
     public function getDateNaissance() {
         return $this->dateNaissance; // Retourne la date de naissance
     }
 
-    
-
+    // Méthode pour calculer l'âge de l'auteur
+    public function age() {
+        $aujourdhui = new DateTime(); // Date actuelle
+        $age = $aujourdhui->diff($this->dateNaissance); // Calcule la différence
+        return $age->y; // Retourne l'âge en années
+    }
 
     // Méthode __toString() pour afficher le nom complet de l'auteur
     public function __toString() {  
